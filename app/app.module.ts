@@ -19,7 +19,7 @@ export const ROUTES: Routes = [
     BrowserModule,
     HttpModule,
     MailModule,
-    RouterModule.forRoot(ROUTES, { enableTracing: true })
+    RouterModule.forRoot(ROUTES)
   ],
   bootstrap: [
     AppComponent

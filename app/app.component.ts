@@ -12,12 +12,12 @@ import { Router } from '@angular/router';
       <div class="app__content">
         <nav>
           <a
-            routerLink="folder/inbox"
+            [routerLink]="[{ outlets: { primary:'folder/inbox', pane:null}}]"
             routerLinkActive="active">
             Inbox
           </a>
           <a
-            routerLink="folder/trash"
+            [routerLink]="[{ outlets: { primary:'folder/trash', pane:null}}]"
             routerLinkActive="active">
             Trash
           </a>
@@ -29,5 +29,10 @@ import { Router } from '@angular/router';
 })
 export class AppComponent implements OnInit {
   constructor(private router: Router) {}
-  ngOnInit() {}
+  ngOnInit() {
+    this.router.events
+      .subscribe(event => {
+        console.log("event", event)
+      })
+  }
 }
