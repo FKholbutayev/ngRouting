@@ -8,7 +8,7 @@ import { Mail } from '../../models/mail.interface';
   template: `
     <a 
       class="mail-item"
-      [routerLink]="['', { outlets: { pane: ['message',message.id] } }]"
+      [routerLink]="['/mail', { outlets: { pane: ['message',message.id] } }]"
       routerLinkActive="active">
       
       <h3>

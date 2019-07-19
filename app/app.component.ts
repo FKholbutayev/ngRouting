@@ -12,17 +12,22 @@ import { Router } from '@angular/router';
       <div class="app__content">
         <nav>
           <a
-            [routerLink]="[{ outlets: { primary:'folder/inbox', pane:null}}]"
+            [routerLink]="['/mail', { outlets: { primary:'folder/inbox', pane:null}}]"
             routerLinkActive="active">
             Inbox
           </a>
           <a
-            [routerLink]="[{ outlets: { primary:'folder/trash', pane:null}}]"
+            [routerLink]="['/mail', { outlets: { primary:'folder/trash', pane:null}}]"
             routerLinkActive="active">
             Trash
           </a>
+          <a
+            [routerLink]="['/dashboard']"
+            routerLinkActive="active">
+          
+          </a>
         </nav>
-        <mail-app></mail-app>
+        <router-outlet></router-outlet>
       </div>
     </div>
   `

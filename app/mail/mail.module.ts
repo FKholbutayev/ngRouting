@@ -13,7 +13,12 @@ import { MainViewResolve } from './components/mail-view/main-view.resolve';
 
 
 
-export const ROUTES: Routes = [
+export const ROUTES: Routes = [ 
+{
+  path:'mail', 
+  component:MailAppComponent, 
+  
+  children: [
   { path: 'folder/:name', 
     component: MailFolderComponent, 
     resolve: {
@@ -27,9 +32,9 @@ export const ROUTES: Routes = [
     resolve: {
       message: MainViewResolve
     }
-  } 
-
-];
+  }
+  ]
+}];
 
 @NgModule({
   imports: [
