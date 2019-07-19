@@ -7,7 +7,9 @@ import { MailModule } from './mail/mail.module';
 import { AppComponent } from './app.component';
 
 export const ROUTES: Routes = [
-  { path: 'dashboard', loadChildren: './dashboard/dashboard.module#DashboardModule'},
+  { 
+    path: 'dashboard', 
+    loadChildren: './dashboard/dashboard.module#DashboardModule' },
   { path: '**', redirectTo: 'mail/folder/inbox' }
 ];
 
