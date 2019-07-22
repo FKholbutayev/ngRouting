@@ -19,7 +19,6 @@ import { Mail } from '../../models/mail.interface';
 
 export class MailViewComponent {
     message:Observable<Mail> = this.route.data.pluck('message')
-    
     constructor(private route:ActivatedRoute) {
 
     }

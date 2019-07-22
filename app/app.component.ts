@@ -24,7 +24,7 @@ import { Router } from '@angular/router';
           <a
             [routerLink]="['/dashboard']"
             routerLinkActive="active">
-          
+            Dashboard
           </a>
         </nav>
         <router-outlet></router-outlet>
